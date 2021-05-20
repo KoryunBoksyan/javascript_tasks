@@ -298,7 +298,7 @@ for (let i = 1; i <= n; i++) {
     y = y + (i / sum );
 }
 
-console.log(` y = ${y} `):
+console.log(` y = ${y} `);
 
 */
 
@@ -323,6 +323,7 @@ for (let i = 0; i <= n; i += 2) {
     sum = sum + y1 / y2
 }
 */
+
 
 /* 28 task
 const n = +prompt("Enter Number N");
@@ -355,3 +356,167 @@ f1: for (let i = 2; i <= 0; i++) {
 }
 
 */
+
+
+
+alert("tasks start");
+/* 23 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+// solution with strings and loop for
+
+const n = checkInputNumber().toString().split("");
+let str = "";
+for (let i = 0; i < n.length; i++) {
+    str = `${str} / ${n[i]} `;
+}
+
+// console.log(n);
+
+alert(str);
+
+*/
+
+/* 23 tasks
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+// solution with arrey and loop while
+
+let num = checkInputNumber();
+
+let numArr = [];
+
+while(num) {
+    numArr.push(num % 10);
+    num = Math.floor(num / 10);
+}
+
+// console.log(numArr);
+
+alert(`Numbers / ${numArr.reverse().join(",")}`);
+
+*/
+
+
+/* 24 tasks
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+// console.log(num);
+let strNum = num.toString().split("");
+// console.log(strNum);
+
+let numDouble = [];
+
+for (let i = 0; i < strNum.length; i++) {
+    if (strNum[i] < 5) {
+        numDouble.push(strNum[i] * 2);
+    }
+}
+// console.log(numDouble);
+
+if (strNum.length === numDouble.length) {
+    alert(`N1 = 2 * ${num} = ${numDouble.join("")}`)
+} else {
+    alert(`N1 = N = ${num}`);
+}
+
+*/
+
+/* 1 task
+
+function values () {
+    for (let x = 1; x <= 8; x += 0.2) {
+        y = 0;
+        if (x < 5) {
+            y = 2 * x + 1;
+            console.log(`x = ${x}`)
+            console.log(`(x < 5)=> y = ${y}`);
+        } 
+        if (x > 5) {
+            y = Math.pow(x, 2) - 1;
+            console.log(`x = ${x}`);
+            console.log(`(x > 5)=> y = ${y}`);
+        }
+    }
+    return y;
+}
+
+y = values();
+*/
+
+
+/* 2 task
+
+function values () {
+    for (let x = 1; x <= 12; x++) {
+        y = 0;
+        if (x < 3) {
+            y = 5 * x + 2;
+            console.log(`x = ${x}`)
+            console.log(`(x < 3)=> y = ${y}`);
+        } 
+        if (x >= 3 && x <= 10) {
+            y = Math.pow(x, 2) + x - 1;
+            console.log(`x = ${x}`);
+            console.log(`(3 < x < 10)=> y = ${y}`);
+        } 
+        if (x > 10) {
+            y = 1;
+            console.log(`x = ${x}`);
+            console.log(`(x > 10)=> y = ${y}`);
+        }
+    }
+    return y;
+}
+
+y = values();
+
+*/
+
+
+/* 3 task
+
+const n = +prompt("Enter Number N");
+let sum = 0;
+
+for (let i = 1; i <= n; i++) {
+    sum = sum + Math.sin(i) / Math.cos(i);
+}
+
+console.log(` S = ${sum} `);
+
+*/
+
+
+
+
