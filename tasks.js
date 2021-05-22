@@ -359,7 +359,6 @@ f1: for (let i = 2; i <= 0; i++) {
 
 
 
-alert("tasks start");
 /* 23 task
 
 function checkInputNumber () {
@@ -516,6 +515,191 @@ for (let i = 1; i <= n; i++) {
 console.log(` S = ${sum} `);
 
 */
+
+
+// page 73 
+/* 4 task
+
+const n = +prompt("Enter Number N");
+const x = +prompt("Enter Number X");
+
+let sum = 0;
+
+for (let i = 1; i <= n; i++) {
+    sum = sum + Math.sin(i) * x;
+}
+
+console.log(` S = ${sum} `);
+
+*/
+
+/* 8 task
+
+const n = +prompt("Enter Number N");
+const x = +prompt("Enter Number X");
+
+let factorial = 1;
+let y = 1;
+
+for (let i = 1; i <= n; i++) {
+    factorial = factorial * i;
+    y = y * ((Math.cos(i) * x) / (Math.pow(2, i) * factorial));
+}
+
+console.log(` Y = ${y} `);
+*/
+
+/* 9 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num)) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = Math.trunc(checkInputNumber());
+
+let y = 1;
+
+if (num % 2) {
+    for (let i = 1; i <= num; i += 2) {
+        y = y * i;
+    }
+} else {
+    for (let i = 2; i <= num; i += 2) {
+        y = y * i;
+    }
+}
+
+console.log(` Y = ${y} `);
+*/
+
+/* 10 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number A");
+    if (isNaN(num) || !Number.isInteger(num)) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+
+let fourPow = 0;
+let i = 1;
+let pow = 0;
+
+while (fourPow < num) {
+    fourPow = Math.pow(4, i);
+    i++;
+}
+
+console.log(` i = ${fourPow} < ${num} `);
+
+*/
+
+/* 11 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+
+let y = 0;
+let factorialOneToNum = 1;
+let factorialNumToTwoNum = 1;
+
+for (let i = 1; i <= num; i++) {
+    factorialOneToNum = factorialOneToNum * i;
+    y = y + factorialOneToNum;
+}
+
+for (let i = num + 1; i <= 2 * num; i++) {
+    factorialNumToTwoNum = num * (num + i);
+    y = y + factorialNumToTwoNum;
+}
+
+console.log(` Y = ${y} `);
+*/
+
+/* 12 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+let number = num;
+let sum = 0;
+
+while (number > 0) {
+    sum += (number % 10);
+    number = Math.trunc(number/10);
+}
+
+alert(` your number = ${num} and the sum of its numbers is ${sum} `);
+
+*/
+
+/* 13 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || !Number.isInteger(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+let number = num;
+let sum = "";
+
+while (number > 0) {
+    sum += (number % 10);
+    number = Math.trunc(number/10);
+}
+
+sum = +sum;
+// console.log(typeof(sum));
+
+alert(` your number = ${num} and reverse value ${sum} `);
+
+*/
+
+
+
+
+
+
+
 
 
 
