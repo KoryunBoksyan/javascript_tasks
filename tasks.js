@@ -714,19 +714,110 @@ for (let i = 1; i <= n; i++) {
 }
 */
 
-/*  30 task
+/* 30 task
 
 const n = +prompt("Enter Number N");
 const m = +prompt("Enter Number M");
 
 for (let i = n; i <= m; i++) {
-    for (let j = 2; j < m / n; j++) {
+    for (let j = 2; j < Math.ceil (m / n); j++) {
         if (Math.pow (i, j) <= m) {
             console.log (`power = ${Math.pow (i, j)}`);
         }
     }
 }
 */
+
+/* 8 task page 92
+const n = +prompt("enter your N", "");
+for (let i = 1; i <= n; i++) {
+    let sum = 0;
+    for (let j = 1; j <= i / 2; j++) {
+        if (i % j === 0) {
+            sum += j;
+        }
+    }
+    sum === i;
+    console.log (i);
+}
+*/
+
+/* Task
+
+let n = 5;
+let yK = 1;
+let prewFactorial  = 1;
+let factorial = 1;
+let sum = 0;
+let nFactorial = 1;
+
+for (let k = 1; k <= n; k++) {
+    yK = yK * (-1);
+    let currentFactorial = 2 * k * k + 1;
+    for (let i = prewFactorial; i <= currentFactorial; i++) {
+        factorial = factorial * i;
+    }
+    sum = sum + yK * factorial
+    prewFactorial  = currentFactorial;
+      
+}
+
+sum = (1 / nFactorial) * sum;
+console.log(sum);
+
+*/
+
+/* 3 tasks page 92
+
+let n = 5;
+let sum = 0;
+
+for (let i =1; i <= n; i++) {
+    let pow = 1;
+    for (let j = 1; j <= i; j++) {
+        pow = pow * (i + j * j);
+    }
+
+    sum = sum + (i + 1) * pow
+}
+
+console.log(sum);
+*/
+
+//  11 task
+
+function checkInputNumber () {
+    
+    let num = +prompt("Enter number N");
+    if (isNaN(num) || num <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return num;
+};
+
+const num = checkInputNumber();
+
+let y = 1;
+let oneToNum = 2;
+let numToTwoNum = 1;
+
+function powToN (num) {
+    let sum = 1;
+    for (let i = num; i <= 2 * num; i++) {
+        sum *= i;
+        console.log(` sum = ${sum} `)
+    }
+    return sum;
+}
+
+for (let i = 1; i <= num; i++) {
+    y += powToN(i);
+    console.log(` y = ${powToN(i)} `)
+}
+
+console.log(` Y = ${y} `);
 
 
 
