@@ -607,37 +607,6 @@ console.log(` i = ${fourPow} < ${num} `);
 
 */
 
-/* 11 task
-
-function checkInputNumber () {
-    
-    let num = +prompt("Enter number N");
-    if (isNaN(num) || num <= 0) {
-        alert("Wrong input number");
-        return checkInputNumber();
-    }
-
-    return num;
-};
-
-const num = checkInputNumber();
-
-let y = 0;
-let factorialOneToNum = 1;
-let factorialNumToTwoNum = 1;
-
-for (let i = 1; i <= num; i++) {
-    factorialOneToNum = factorialOneToNum * i;
-    y = y + factorialOneToNum;
-}
-
-for (let i = num + 1; i <= 2 * num; i++) {
-    factorialNumToTwoNum = num * (num + i);
-    y = y + factorialNumToTwoNum;
-}
-
-console.log(` Y = ${y} `);
-*/
 
 /* 12 task
 
@@ -693,6 +662,72 @@ sum = +sum;
 alert(` your number = ${num} and reverse value ${sum} `);
 
 */
+
+
+// Start 
+
+/* 28 task page 83
+
+const n = +prompt("Enter Number N");
+const p = +prompt("Enter Number P");
+const a = +prompt("Enter Number A");
+
+
+let y = 1;
+
+for (let m = 1; m <= n; m++) {
+    let sum = 0;
+    for (let k = 0; k < p; k++) {
+        sum += Math.pow (a, (m + k));
+        // console.log(`sum = ${sum}`);
+    }
+    y *= Math.pow (m, 2) * sum;
+    // console.log(`y = ${y}`);
+}
+
+console.log(y);
+*/
+
+/* 29 task
+function checkInputNumber () {
+    
+    let n = +prompt("Enter number N");
+    if (isNaN(n) || !Number.isInteger(n) || n <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return n;
+};
+
+const n = checkInputNumber();
+startLoop:
+for (let i = 1; i <= n; i++) {
+    for (let k = 2; k < i; k++) {
+        if (i % k === 0) {
+            continue startLoop;
+        }
+
+        
+    }
+    console.log (`i = ${i}`);
+}
+*/
+
+/*  30 task
+
+const n = +prompt("Enter Number N");
+const m = +prompt("Enter Number M");
+
+for (let i = n; i <= m; i++) {
+    for (let j = 2; j < m / n; j++) {
+        if (Math.pow (i, j) <= m) {
+            console.log (`power = ${Math.pow (i, j)}`);
+        }
+    }
+}
+*/
+
 
 
 
