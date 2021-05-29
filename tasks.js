@@ -688,7 +688,7 @@ for (let m = 1; m <= n; m++) {
 console.log(y);
 */
 
-/* 29 task
+/* 29 task page 85
 function checkInputNumber () {
     
     let n = +prompt("Enter number N");
@@ -714,7 +714,7 @@ for (let i = 1; i <= n; i++) {
 }
 */
 
-/* 30 task
+/* 30 task page 85
 
 const n = +prompt("Enter Number N");
 const m = +prompt("Enter Number M");
@@ -728,21 +728,97 @@ for (let i = n; i <= m; i++) {
 }
 */
 
-/* 8 task page 92
-const n = +prompt("enter your N", "");
-for (let i = 1; i <= n; i++) {
-    let sum = 0;
-    for (let j = 1; j <= i / 2; j++) {
-        if (i % j === 0) {
-            sum += j;
-        }
+
+/*  11 task page 73
+
+function checkInputNumber () {
+    
+    let n = +prompt("Enter number N");
+    if (isNaN(n) || !Number.isInteger(n) || n <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
     }
-    sum === i;
-    console.log (i);
+
+    return n;
+};
+
+const n = checkInputNumber();
+
+let y = 1 * 2;
+let k = 1;
+let sum = y;
+
+for (let i = 3; i <= n; i +=2) {
+    y = y * i * (i + 1) / k++;
+    sum += y;
+    console.log(sum);
 }
 */
 
-/* Task
+
+
+// Start
+
+/* 2 task 92 page
+
+const n = +prompt("Enter Number N");
+const m = +prompt("Enter Number M");
+
+let y = 0;
+
+for (let i = n; i <= m; i++) {
+    y += Math.pow (i, i);
+}
+
+console.log(y);
+*/
+
+
+
+/* 3 tasks page 92
+
+let n = 5;
+let sum = 0;
+
+for (let i =1; i <= n; i++) {
+    let pow = 1;
+    for (let j = 1; j <= i; j++) {
+        pow = pow * (i + j * j);
+    }
+
+    sum = sum + (i + 1) * pow
+}
+
+console.log(sum);
+*/
+
+/* 4 task page 92
+
+const n = +prompt("Enter Number N");
+const x = +prompt("Enter Number X");
+
+let sum = 0;
+let factorial = 1;
+
+
+function factorial(num, result){
+    result = result || 1;
+    if(!num){
+        return result;
+    }else{
+        return factorial(n-1, result*n);
+    }
+}
+
+for (let i = 1; i <= n; i++) {
+    sum += (Math.pow (i, i) * Math.pow (x, i)) / factorial(i, factorial);
+}
+
+console.log(sum);
+*/
+
+
+/* 5 task page 92
 
 let n = 5;
 let yK = 1;
@@ -764,60 +840,226 @@ for (let k = 1; k <= n; k++) {
 
 sum = (1 / nFactorial) * sum;
 console.log(sum);
-
 */
 
-/* 3 tasks page 92
-
-let n = 5;
-let sum = 0;
-
-for (let i =1; i <= n; i++) {
-    let pow = 1;
-    for (let j = 1; j <= i; j++) {
-        pow = pow * (i + j * j);
-    }
-
-    sum = sum + (i + 1) * pow
-}
-
-console.log(sum);
-*/
-
-//  11 task
-
+/* 6 task page 92
 function checkInputNumber () {
     
-    let num = +prompt("Enter number N");
-    if (isNaN(num) || num <= 0) {
+    let n = +prompt("Enter number N");
+    if (isNaN(n) || !Number.isInteger(n) || n <= 0) {
         alert("Wrong input number");
         return checkInputNumber();
     }
 
-    return num;
+    return n;
 };
 
-const num = checkInputNumber();
+const n = checkInputNumber();
 
-let y = 1;
-let oneToNum = 2;
-let numToTwoNum = 1;
+startLoop:
+for (let i = 1; i <= n / 2; i++) {
+    for (let k = 2; k < i; k++) {
+        if (i % k === 0) {
+            continue startLoop;
+        }
 
-function powToN (num) {
-    let sum = 1;
-    for (let i = num; i <= 2 * num; i++) {
-        sum *= i;
-        console.log(` sum = ${sum} `)
+        
     }
-    return sum;
+    if ( !(n % i)  ) {
+        console.log(i);
+    }
+} 
+*/
+
+/* 7 task page 92
+
+const n = +prompt("Enter Number N");
+const m = +prompt("Enter Number M");
+
+for (let i = 1; i < n; i++) {
+    let sum = 0;
+    let num = i;
+    while (num) {
+        let digit = num % 10;
+        sum += Math.pow (digit, 2);
+        num = Math.trunc (num / 10);
+    }
+    if (sum === m) {
+        console.log(i);
+    } 
+}
+*/
+
+/* 8 task page 92
+const n = +prompt("enter your N", "");
+for (let i = 1; i <= n; i++) {
+    let sum = 0;
+    for (let j = 1; j <= i / 2; j++) {
+        if (i % j === 0) {
+            sum += j;
+        }
+    }
+    sum === i;
+    console.log (i);
+}
+*/
+
+/* 9 task page 92
+
+function checkInputNumber () {
+    
+    let n = +prompt("Enter number N");
+    if (isNaN(n) || !Number.isInteger(n) || n <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return n;
+};
+
+const n = checkInputNumber();
+
+for (let i = n; i > 0; i--) {
+    for (let j = 1; j < i; j++) {
+        if (Math.pow(i, 2) === Math.pow(j , 2) + Math.pow((j+1), 2)){
+            console.log(`a = ${i} b = ${j} c = ${j+1}`);
+        }
+    }
+}
+*/
+
+/* 10 task page 93
+
+function checkInputNumber () {
+    let n = +prompt("Enter number N");
+    if (isNaN(n) || !Number.isInteger(n) || n <= 0) {
+        alert("Wrong input number");
+        return checkInputNumber();
+    }
+
+    return n;
+};
+
+const n = checkInputNumber();
+
+let counter = 0;
+let num = n;
+
+function powCounter () {
+    if (num) {
+        counter += 1;
+        num = Math.trunc(num / 10);
+        return powCounter();
+    }
+    return counter;
+};
+
+const count = powCounter();
+
+let numCopy = n;
+let sum = 0;
+while (numCopy) {
+    let digit = numCopy % 10;
+    sum += Math.pow (digit, count);
+    numCopy = Math.trunc (numCopy / 10);
+}
+if (sum === n) {
+    console.log(`${n} is an Amstrong number`);
+} else {
+    console.log(`${n} isn't an Amstrong number`);
 }
 
-for (let i = 1; i <= num; i++) {
-    y += powToN(i);
-    console.log(` y = ${powToN(i)} `)
-}
+*/
 
-console.log(` Y = ${y} `);
+// // 31 task Array
+
+// const arr = [1, -5, 100, -150, 0, 20, 5, -2, 20];
+// // 146
+// let sum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//         sum += arr[i];
+//     }   
+// }
+
+// console.log(sum);
+
+
+// //  32 task Array
+
+// const arr = [1, -5, 100, -150, 22, 2, 0, -30, 10, 15, 0, 20, 5, -2, 20];
+// // 150
+
+// let sum = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//         sum += arr[i];
+//     } else if (arr[i] === 0) {
+//         break;
+//     }
+// }
+// console.log(sum);
+
+
+// //  33 task Array
+
+// const arr = [1, -5, 100, -150, 22, 2, 0, -30, 10, 15, 0, 20, 300, 5, -2, 20];
+// // 12
+
+// let max = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (max < arr[i]) {
+//         max = arr[i];
+//     } 
+// }
+
+// console.log(arr.indexOf(max));
+
+
+// //  34 task Array
+
+// const arr = [1, -5, 100, -150, 22, 2, 0, -30, 10, 15, 0, 20, 300, 5, -2, 20];
+// // 6, 9 indexys
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+//         arr.splice(i, 1);
+//     }    
+// }
+// console.log(arr);
+
+
+// // 36 task Array
+
+// const arr = [1, -5, 100, -150, 22, 2, 0, -30, 10, 15, 0, 20, 300, 5, -2, 20];
+// const arrReverse = [];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     arrReverse.push(arr[i]);
+// }
+// console.log(arrReverse);
+// console.log(arr.reverse());
+
+
+// // 37 task Array
+
+// const arr = [1, 5, 4, 98, 85, -6, 12, 11, 1, 8, 7, 92, 251, -150, 0, 7, 22, 85, -6];
+
+// for (let i = 0; i < arr.length; i++) {
+//     for (let k = i; k < arr.length; k++) {
+//         if (arr[i] < arr[k]) {
+//             let x = arr[i];
+//             arr[i] = arr[k];
+//             arr[k] = x;
+//         }
+//     }
+// }
+
+// console.log(arr);
+
+
 
 
 
